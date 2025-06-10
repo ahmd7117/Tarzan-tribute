@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Jameel+Noori+Nastaleeq&display=swap');
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Jameel Noori Nastaleeq', serif;
+  background: radial-gradient(circle at center, #001021, #000810);
+  color: #eef2f5;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+#overlay {
+  position:absolute; top:0; left:0; width:100%; height:100%;
+  background: url('https://i.imgur.com/BsXaBBd.png') center/cover no-repeat;
+  opacity:0.2;
+}
+.nav {
+  position: fixed; top:20px; left:50%; transform:translateX(-50%);
+  display:flex; gap:20px;
+}
+.nav button {
+  padding:10px 20px; background:rgba(255,255,255,0.1);
+  border:none; border-radius:5px; color:#fff; cursor:pointer;
+  font-size:1.1em; transition:3s;
+}
+.nav button:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.1);
+}
+#content {
+  position:absolute; top:50%; left:50%;
+  transform: translate(-50%, -50%);
+  width: 90%; max-width:700px;
+  text-align: center;
+}
+h1, h2 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+p {
+  font-size:1.5em; line-height:1.8; margin: 20px 0;
+}
+.fade {
+  animation: fade 1s ease;
+}
+@keyframes fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
